@@ -1,5 +1,6 @@
 package com.agisoft.ktdemo
 
+import org.springframework.boot.Banner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -7,5 +8,7 @@ import org.springframework.boot.runApplication
 class KtDemoApplication
 
 fun main(args: Array<String>) {
-	runApplication<KtDemoApplication>(*args)
+	runApplication<KtDemoApplication>(*args) {
+		setBannerMode(Banner.Mode.OFF)
+	}
 }
