@@ -12,3 +12,6 @@ fun main(args: Array<String>) {
 		setBannerMode(Banner.Mode.OFF)
 	}
 }
+
+
+//https://spring.io/guides/tutorials/spring-boot-kotlin#maven-build
