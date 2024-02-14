@@ -25,4 +25,12 @@ class RepositoriesTests @Autowired constructor(
         assertThat(found).isEqualTo(article)
     }
 
+    @Test
+    fun `When findByLogin then return User`() {
+        val johnDoe = User("johnDoe", "John", "Doe")
+        entityManager.persist(johnDoe)
+        entityManager.flush()
+        val user = userRepository.findByLogin(johnDoe.login)
+        assertThat(user).isEqualTo(johnDoe)
+    }
 }
